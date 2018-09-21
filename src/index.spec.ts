@@ -1,9 +1,9 @@
 /// <reference types="sinon" />
-declare module NodeJS  {
-    interface Global {
-      sinon: sinon.SinonStatic;
-      expect: Chai.ChaiStatic;
-    }
+declare module NodeJS {
+  interface Global {
+    sinon: sinon.SinonStatic;
+    expect: Chai.ChaiStatic;
+  }
 }
 
 const glob = require('glob');
@@ -12,7 +12,7 @@ const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 chaiLib.use(sinonChai);
 
-const { expect } : Chai.ChaiStatic = chaiLib;
+const { expect }: Chai.ChaiStatic = chaiLib;
 global.sinon = sinon;
 global.expect = chaiLib.expect;
 
