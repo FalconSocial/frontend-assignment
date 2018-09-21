@@ -1,0 +1,137 @@
+$board-height: 512px;
+$piece-size: 75px;
+$piece-margin: 5px;
+$total-piece-size: ($piece-size + ($piece-margin * 2));
+$avatar-size: $piece-size;
+$avatar-margin: $piece-margin;
+$player-one-color: #faebd7;
+$player-two-color: #8fbc8f;;
+
+@keyframes winner-jump {
+    from { transform: translateY(0) rotateY(0); }
+    to { transform: translateY(-7px)  rotateY(20deg); }
+}
+@keyframes drop-in {
+    from { transform: translateY(-$board-height); }
+    to { transform:  translateY(0); }
+}
+@keyframes thinking {
+    from { transform: rotateZ(-45deg) translate(-12px, 45px); }
+    to { transform: rotateZ(-50deg) translate(-12px, 45px); }
+}
+
+.flc-game-piece {
+    box-sizing: border-box;
+    display: inline-block;
+    width: $piece-size;
+    height: $piece-size;
+    border-radius: 100%;
+    box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 2px rgba(255, 255, 255, 0.5);
+    margin: $piece-margin;
+    pointer-events: none;
+}
+.flc-game-avatar-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.flc-game-avatar {
+    display: inline-block;
+    height: $avatar-size;
+    width: $avatar-size;
+    border: 1px solid #eee;
+    border-radius: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    margin: $avatar-margin;
+    background-position-y: 2px;
+    overflow: hidden;
+    box-sizing: border-box;
+    &:after {
+        content: "";
+        background-image: url('../lib/styles/assets/hand.svg');
+        background-repeat: none;
+        height: 30px;
+        width: 30px;
+        background-size: contain;
+        display: none;
+    }
+    &.man {
+        background-image: url('../lib/styles/assets/man.svg');
+    }
+    &.woman {
+        background-image: url('../lib/styles/assets/woman.svg');
+    }
+}
+.flc-game-board {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: $board-height;
+    display: flex;
+    align-items: flex-end;
+    width: $total-piece-size * 7;
+    background: #fff;
+    box-shadow: inset 0 0px 10px rgba(0,0,0,0.1);
+    > .board-col {
+        box-sizing: border-box;
+        height: 100%;
+        width: $total-piece-size;
+        border-right: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        &:last-child {
+            border: 0;
+            width: $total-piece-size;
+        }
+        &:before {
+            content: "";
+            box-sizing: border-box;
+            width: $piece-size;
+            height: $piece-size;
+            display: inline-block;
+            border-radius: 100%;
+            margin: $piece-margin;
+            border: 2px dashed #ccc;
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+        &:hover {
+            background: #f9f9f9;
+            box-shadow: inset 0px -3px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            &:before {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        > .flc-game-piece {
+            animation: drop-in 0.5s linear;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.player-one {
+    background-color: $player-one-color;
+    border: 1px solid green;
+}
+.player-two {
+    background-color: $player-two-color;
+    border: 1px solid green;
+}
+.winner {
+    animation: winner-jump 0.3s cubic-bezier(.17,.67,.83,.67) infinite alternate-reverse !important;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.their-turn {
+    border-width: 2px;
+    &:after {
+        display: inline-block;
+        animation: thinking 2s linear infinite alternate-reverse !important;
+    }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <title>Falcon.io | Assignment documentation</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <style>
+          body { display: none; }
+    </style>
+</head>
+
+<body>
+    <div class="flc-layout-bg mdl-layout mdl-js-layout">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">
+                    <img src="./falcon_logo_black.svg" />
+                </span>
+                <a href="/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Back to game</a>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link flc-navigation__group-header" href="#requirements">Requirements</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#acceptance-criteria">Acceptance criteria</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#technical-requirements">Technical requirements</a>
+
+                    <a class="mdl-navigation__link flc-navigation__group-header" href="#boilerplate">Boilerplate</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#get-started">Get started</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#websocket-api">Websocket API</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#writing-tests">Writing tests</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#ui-library">UI library</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#game-assets">Game assets</a>
+
+                    <a class="mdl-navigation__link flc-navigation__group-header" href="#how-to-submit">How to submit?</a>
+                    <a class="mdl-navigation__link flc-navigation__group-item" href="#after-submission">After submission</a>
+                    <a class="mdl-navigation__link flc-navigation__group-header" href="#how-do-we-evaluate">How do we evaluate?</a>
+                </nav>
+
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content"
+                    style="width: 100%;">
+                    <div class="mdl-grid">
+                        <div class="mdl-card mdl-shadow--2dp"
+                            style="width: 100%;">
+                            <div class="mdl-card__supporting-text">
+                                <h1 class="mdl-typography--display-1">Assignment documentation</h1>
+                                <p class="mdl-typography--body-2">
+                                    Welcome to the assignment for candidates applying for a frontend position at Falcon.io.
+                                    <br>
+                                    In the following sections you can read up on the requirements and setup of the assignment.
+                                </p>
+                                <hr/>
+                                <div class="mdl-grid">
+                                    <div class="mdl-cell--12-col">
+                                        <h2 class="mdl-typography--title">Requirements</h2>
+                                        <a name="requirements"></a>
+                                        <p>
+                                            You're tasked with creating a prototype of the classic game <b>4-in-a-row</b>. The game is a turn-based puzzle for two players, and the rules
+                                            are simple:
+                                            <br/>
+                                            <ul>
+                                                <li>
+                                                   The game board is made up of a 7x6 grid.
+                                                </li>
+                                                <li>
+                                                   Whoever is first to get four pieces in a horizontal, vertical or diagonal line on the game board wins the game.
+                                                </li>
+                                            </ul>
+
+                                            If you want to try out a version of the game to better understand the
+                                            rules, a version can be found <a target="_blank" href="https://www.coolmathgames.com/0-4-in-a-row">here</a>.
+                                        </p>
+                                        <p>
+                                            We expect the submission to be handed in within 10-20 days. <br>
+                                            If you, for any reason, estimate that you cannot finish the assignment within the timeframe please be communicative about an ETA.
+                                        </p>
+                                        <p>
+                                            If you navigate to <a href="/">http://localhost:8080</a> <i>(or click "Back to Game" in the left-hand menu)</i> you'll see a page with static markup demoing the initial layout of the game.
+                                            <br/>
+                                           Your task is to turn this page into a Single Page Application hosting the game and the requirements hereof.
+                                            <br/>
+                                            The <code>index.html</code> file is found in the <code>/src</code></i> folder. This folder is also your working directory where you'll implement the game.
+                                        </p>
+
+                                        <h3 class="mdl-typography--body-2 flc-subhead">Acceptance criteria</h3>
+                                        <a name="acceptance-criteria"></a>
+                                        <p>
+                                            Below you find the business requirements for the game.
+                                            <br/> Note that there are requirements both towards the gameplay and the
+                                            implementation it self.
+                                        </p>
+                                        <ol>
+                                            <li>A player of the game must be able to:
+                                                <ol type="a">
+                                                    <li>Start a game</li>
+                                                    <li>Join a game</li>
+                                                    <li>Win or lose a game</li>
+                                                    <li><i>(Optional)</i> Leave/surrender a game</li>
+                                                </ol>
+                                            </li>
+                                            <li>The gameplay must work in realtime across two browser sessions <i>(using the <a href="#websocket-api">Websocket API</a> layer provided in the boilerplate)</i>.</li>
+                                            <li>Only two players can join a single game.</li>
+                                            <li>Multiple game sessions can be running at the same time on the same Websocket API instance.</li>
+                                            <li>The game is implemented using TypeScript. <i>(Custom type definitions are encouraged, but not required</i>).</li>
+                                            <li>The game must, as a minimum, work in the latest version of Chrome or Firefox.</li>
+                                            <li><i>(Optional)</i> Handle client disconnects <i>(e.g. auto-reconnect to a game if client gets disconnected unexpectectly)</i>.</li>
+                                            <li><i>(Optional)</i> Enable PWA <i>(Progressive Web App)</i> features, like background sync, offline support and push notifications.</li>
+                                            <li><i>(Optional)</i> Extend the build pipeline with a Webpack config that outputs production ready code.</li>
+                                        </ol>
+                                        <p>
+                                            The criteria marked as <i>optional</i> are, as the name suggest, not critical for the evaluation,
+                                            and are not required to be part of your final submission.
+                                            <br/>
+                                            Only if you find the extra time or feel like taking on the extra challenge, should you implement them.
+                                            <br/>
+                                            They can, however, be talking points during a potential technical interview.
+                                            <br/>
+                                            E.g.: <i>How would you ensure that a distribution is production ready?</i> or <i>How would you handle flaky internet connections?</i>.
+                                        </p>
+
+                                        <h3 class="mdl-typography--body-2 flc-subhead">Technical requirements</h3>
+                                        <a name="technical-requirements"></a>
+                                        <p>
+                                            At Falcon.io we use <a href="https://angular.io"
+                                                target="_blank">Angular</a> as the main platform to build applications, however you're free
+                                            to use any framework and libraries to implement the game, or even go vanilla.
+                                            <br/> The important thing is that you feel comfortable in solving the core
+                                            tasks and can defend your choices and patterns in a potential technical interview.
+                                        </p>
+                                        <p>
+                                            Regardless of your framework and library choices, there are certain areas that we expect you to address in your submission,
+                                            since these will be considered doing the evaluations:
+                                            <ol>
+                                                <li>You display modern best practices and good code hygiene.</li>
+                                                <li>You stay <i>(as much as possible)</i> within the boilerplate setup.
+                                                    Any deviations you can defend with objective arguments. </li>
+                                                <li>You follow Git practices and your commit history tells the story
+                                                    of how you iterated on the task.</li>
+                                                <li>The game meets accessibility standards.</li>
+                                                <li>The game is scalable, maintainable and pragmatic in its structure.
+                                                    Both on code and file level.</li>
+                                                <li>The game is built for testability, demonstrated by actual tests.</li>
+                                                <li>Complicated or non-obvious choices in the code must be supported by code-level comments.</li>
+                                                <li>The <code>README.md</code> must contain a brief <i>(a few lines)</i> explanation of how you solved the task, as well as objective arguments for potential changes to the boilerplate.</li>
+                                            </ol>
+                                            Read more about how we evaluate your submission <a href="#how-do-we-evaluate">here</a>.
+                                        </p>
+
+                                        <h2 class="mdl-typography--title">Boilerplate</h2>
+                                        <a name="boilerplate"></a>
+                                        <p>
+                                            To get you started and to help you focus on the core tasks, we've provided you with a boilerplate setup.
+                                            <br/> The setup consist of:
+                                            <ul>
+                                                <li>Webpack development setup</li>
+                                                <li>Mocha test runner for unit tests</li>
+                                                <li>NPM scripts for bootstrapping</li>
+                                                <li>Websocket server with a minimal API</li>
+                                                <li>Websocket client with a minimal API</li>
+                                                <li>UI library</li>
+                                                <li>General HTML boilerplate</li>
+                                                <li>Premade game assets</li>
+                                            </ul>
+                                            <h3 class="mdl-typography--body-2 flc-subhead">Get started</h3>
+                                            <a name="get-started"></a>
+                                            <p>
+                                                The <code>/src</code> folder is your working directory. Here you'll find 4 index files, one for HTML, one for Typescript, one for SCSS(CSS) and one to aggregate unit tests.
+                                                <br>
+                                                <br>
+                                                With the exception of the <code>webpack</code> configuration the files supporting the boilerplate are found in the <code>/lib</code> folder.
+                                                <br>
+                                                Currently no framework or similar is preinstalled <i>(with the exception of the ones supporting the Websocket API)</i>
+                                                <br>
+                                                Note that if you wish to use the CLI tools of a given framework, e.g. <code>ng new</code> for Angular or <code>create-react-app</code> for React, make sure that the working directory remains <code>/src</code>,
+                                                and that you document any new build pipeline in <code>README.md</code>.
+                                                <br>
+                                            </p>
+                                            <p>
+                                                The Webpack config is configured to transpile, bundle and serve up the application through a local development server.
+                                                To start the development server run the following command <i>(this will also serve this page)</i>:
+                                                <code class="flc-code-block">
+                                                    npm start
+                                                </code>
+                                            </p>
+
+                                            <h3 class="mdl-typography--body-2 flc-subhead">Websocket API</h3>
+                                            <a name="websocket-api"></a>
+                                            <p>
+                                                As mentioned in the <a href="#requirements">requirements section</a> the game must work in realtime across two browser sessions.
+                                                To help you accomplish this we're providing a pre-defined Websocket setup.
+                                                The setup consist of two layers:
+                                                <ul>
+                                                    <li>A channel based Websocket server.</li>
+                                                    <li>A client-side connector API based on observables <i>(using <a href="https://github.com/reactivex/rxjs" target="_blank">RxJS</a>)</i>.</li>
+                                                </ul>
+                                            </p>
+                                            <p>
+                                                To boot up the Websocket server run the following command:
+                                                <code class="flc-code-block">
+                                                    npm run ws_api
+                                                </code>
+                                            </p>
+                                            <p>
+                                                In <code>index.ts</code> you'll find a demo script with code examples of how the client connector works. Make sure to remove this script prior to submission.
+                                            </p>
+                                            <p>
+                                                Note that the Websocket API only implements the absolute minimum requirements for the realtime logic, and
+                                                is only meant to provide a basic setup for you to solve the tasks.
+                                                <br/>
+                                                You're free to change and/or extend the logic of the Websocket server and the client-side connector.
+                                                Should you decide to do so, we expect that you briefly describe the changes in your documentation <i>(in <code>README.md</code></i>) with objective arguments.
+                                            </p>
+                                            <p>
+                                                If you face issues when booting up the development server or API, make sure that you're running the LTS version of NodeJS, like <code>v8.10.0</code> <br>
+                                            </p>
+                                            <h3 class="mdl-typography--body-2 flc-subhead">Writing tests</h3>
+                                            <a name="writing-tests"></a>
+                                            <p>The boilerplate comes with a <code>mocha</code> test runner using <code>chai</code> for assertion and <code>sinon</code> for stubbing/mocking.</p>
+                                            <ul>
+                                                <li>
+                                                    <a href="https://mochajs.org/" target="_blank">Mocha</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.chaijs.com/" target="_blank">Chai</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://sinonjs.org/" target="_blank">Sinon</a>
+                                                </li>
+                                            </ul>
+                                            <p>By running <code>npm test</code> all <code>*.spec.ts</code> will be picked up and run in sequence.</p>
+                                            <p>Example of tests format:</p>
+                                            <code class="flc-code-block">
+                                                describe('example', () => {
+                                                    <br>
+                                                    &nbsp;&nbsp; it('is true', () => {
+                                                    <br>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;expect(true).to.be.true;
+                                                    <br>
+                                                    &nbsp;&nbsp;});
+                                                    <br>
+                                                });
+                                            </code>
+                                            <p>
+                                              If you decide to use a CLI tool to manage your framework of choice, e.g. <code>ng</code> for Angular, you're welcome to utilise the build-in test setup. <br>
+                                              Just make sure to highlight this in <code>README.md</code>.
+                                            </p>
+
+                                            <h3 class="mdl-typography--body-2 flc-subhead">UI library</h3>
+                                            <a name="ui-library"></a>
+                                            <p>
+                                                To support the overall visual aspect and layout, the boilerplate comes with Material Design Lite CSS framework.
+                                                <br/>
+                                                You can find the documentation of Material Design Lite <a href="https://getmdl.io/" parent="_blank">here</a>.
+                                                <br/>
+                                                There are framework bindings that you're free to use, although it is not required:
+                                                <ul>
+                                                    <li><a href="http://mseemann.io/angular2-mdl/menu" parent="_blank">Angular</a></li>
+                                                    <li><a href="https://github.com/tleunen/react-mdl" parent="_blank">React</a></li>
+                                                    <li><a href="https://posva.net/vue-mdl-docs/" parent="_blank">Vue</a></li>
+                                                </ul>
+                                            </p>
+                                            <p>
+                                                If you're already an expert in another UI/component library, e.g. Bootstrap or Schematic UI, you're welcome to utilise this instead.
+                                                <br/>
+                                                However, be aware, that Material Design Lite is also used for this documentation, so make sure to support both UI libraries to avoid a broken documentation page.
+                                            </p>
+
+                                            <h3 class="mdl-typography--body-2 flc-subhead">Game assets</h3>
+                                            <a name="game-assets"></a>
+                                            <p>
+                                                In the <code>/lib/styles</code> folder you'll find a <code>game.scss</code> file that contains styling for the game.
+                                                <br>
+                                                The assets are:
+                                                <ul>
+                                                    <li>The game board</li>
+                                                    <li>Player avatar</li>
+                                                    <li>Game piece</li>
+                                                </ul>
+                                            </p>
+                                            <p>Note that avatar and game piece can be represented differently depending on state. </p>
+                                            <div class="flc-demo-block">
+                                                <p style="font-weight: bold">Avatars</p>
+                                                <span class="flc-game-avatar woman"></span>
+                                                <span class="flc-game-avatar man"></span>
+                                                <span class="flc-game-avatar man player-one"></span>
+                                                <span class="flc-game-avatar woman player-two"></span>
+                                                <span class="flc-game-avatar man player-one their-turn"></span>
+                                                <span class="flc-game-avatar woman player-two winner"></span>
+                                                <code class="flc-code-block">
+                                                    &lt;span class="flc-game-avatar woman"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-avatar man"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-avatar man player-one"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-avatar woman player-two"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-avatar man player-one their-turn"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-avatar woman player-two winner"&gt;&lt;/span&gt;
+                                                </code>
+                                            </div>
+                                            <div class="flc-demo-block">
+                                                <p style="font-weight: bold">Pieces</p>
+                                                <span class="flc-game-piece player-one"></span>
+                                                <span class="flc-game-piece player-two"></span>
+                                                <span class="flc-game-piece player-two winner"></span>
+                                                <code class="flc-code-block">
+                                                    &lt;span class="flc-game-piece player-one"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-piece player-two"&gt;&lt;/span&gt;
+                                                    <br>
+                                                    &lt;span class="flc-game-piece player-two winner"&gt;&lt;/span&gt;
+                                                </code>
+                                            </div>
+                                            <div class="flc-demo-block">
+                                                <p style="font-weight: bold">Populated board <i>(7x6 grid)</i></p>
+                                                <div class="flc-game-board">
+                                                    <div class="board-col">
+
+                                                    </div>
+                                                    <div class="board-col">
+                                                        <span class="flc-game-piece player-two winner"></span>
+                                                    </div>
+                                                    <div class="board-col">
+                                                        <span class="flc-game-piece player-two winner"></span>
+                                                        <span class="flc-game-piece player-one"></span>
+                                                    </div>
+                                                    <div class="board-col">
+                                                        <span class="flc-game-piece player-two winner"></span>
+                                                        <span class="flc-game-piece player-one"></span>
+                                                        <span class="flc-game-piece player-one"></span>
+                                                    </div>
+                                                    <div class="board-col">
+                                                        <span class="flc-game-piece player-two winner"></span>
+                                                        <span class="flc-game-piece player-two"></span>
+                                                        <span class="flc-game-piece player-one"></span>
+                                                        <span class="flc-game-piece player-two"></span>
+                                                    </div>
+                                                    <div class="board-col">
+                                                            <span class="flc-game-piece player-one"></span>
+                                                            <span class="flc-game-piece player-one"></span>
+                                                    </div>
+                                                    <div class="board-col"></div>
+                                                </div>
+                                                <code class="flc-code-block">
+                                                    &lt;div class="flc-game-board"&gt;
+                                                    <br>
+                                                       &nbsp; &nbsp; &lt;div class="board-col"&gt;
+                                                            <br>
+                                                            &nbsp; &nbsp; &nbsp; &nbsp; <i>[pieces]</i>
+                                                            <br>
+                                                        &nbsp; &nbsp; &lt;/div&gt;
+                                                    <br>
+                                                        &nbsp; &nbsp; <i>...x 7 columns</i>
+                                                    <br>
+                                                    &lt;/div&gt:
+                                                </code>
+                                            </div>
+                                        </p>
+
+                                        <h2 class="mdl-typography--title">How to submit?</h2>
+                                        <a name="how-to-submit"></a>
+                                        <p>
+                                            You submit your result via a Git repo.
+                                        </p>
+                                        <p>
+                                            Initialize an empty repo, copy/fork the code-base of this repo into yours and provide us access. Preferably via GitHub.
+                                            <br>
+                                            Remember to copy over any dot files, i.e <code>.gitignore</code> etc.
+                                        </p>
+                                        <p>Make sure that you have a Git history with meaningful commits that tells the story of how you solved the task.
+                                        <br>A single <code>init commit</code> <i>(or similar)</i> contaning the entire solution is highly discouraged and will prevent us from doing proper evaluation.
+                                        </p>
+                                        <p>
+                                            If you've added build steps, additional NPM scripts or other steps that are required to make your implementation work, make
+                                            sure that you've highlighted and described these in <code>README.md</code>
+                                        </p>
+                                        <p>
+                                            Make sure to fix the versions of any <code>node_modules</code>. This will ensure that the runtime environments will match. <br>
+                                            <ul>
+                                                <li>
+                                                    <strong>BAD</strong> <code>"some-package": "^0.3.1"</code>
+                                                </li>
+                                                <li>
+                                                    <strong>GOOD</strong> <code>"some-package": "0.3.1"</code>
+                                                </li>
+                                            </ul>
+                                            Alternatively, you can create a Docker image holding the runtime environment.
+                                        </p>
+                                        <p><strong>IMPORTANT:</strong> A static Zip/RAR file containing the solution is not considered a valid submission and will be disregarded.</p>
+                                        <p>Once you're ready to submit send link to the remote Git repo to <strong>frontend-assignment@falcon.io</strong></p>
+
+                                        <h3 class="mdl-typography--body-2 flc-subhead">After submission</h3>
+                                        <a name="after-submission"></a>
+                                        <p>
+                                            After you've submitted your result it will be evaluated by two or more members of the frontend team at Falcon.io. <br>
+                                            You'll typically hear back from us within a week unless communicated otherwise.
+                                        </p>
+                                        <p>
+                                            If we conclude that your submission displays the technical skill level that we're looking for, we will invite you to a technical interview. Either onsite or remotely <i>(via Hangout or similar)</i> depending on your location and availability. <br>
+                                            At the interview we will use your submission as the base of the conversation. We will talk about how you solved it, why you made the decisions you made and how you would improve it if you should refactor it. <br>
+                                            If the <i>optional</i> requirements are not part of your submission, we will also be talking about these on a high level, i.e. how would you solve them, what are the pitfalls and is your current implementation flexible and scalable enough to accommondate new features?
+                                        </p>
+
+                                        <h2 class="mdl-typography--title">How do we evaluate?</h2>
+                                        <a name="how-do-we-evaluate"></a>
+                                        <p>
+                                            When we evaluate your submission there are some main areas that we will weight in:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <strong>Does your Git history reveal your workflow?</strong><br>
+                                                    When taking a first look at your Git repo we assess how you've iterated on the task. <br>
+                                                    We do this by glancing through your Git commits. This will give us an idea of how you've priorised the sub-task
+                                                    and how you've iterated on those. <br>
+                                                    E.g. how are business critical vs. non-critical implementations balanced? <br>
+                                                    Therefore make sure that your commit messages provide specific context, e.g.: <br>
+                                                    <strong>BAD</strong> <code>some fixes</code> <br>
+                                                    <strong>GOOD</strong> <code>fix(game-logic): fix issues with the winner calculation </code>
+                                                </p>
+                                                <p>
+                                                    <a target="_blank" href="https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines">The Angular Commit Message Guidelines</a> might prove useful for this.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <strong>Does your solution work out-of-the-box?</strong><br>
+                                                    Next, we read through your <code>README.md</code> and follow your instructions. <br>
+                                                    Did you add custom steps? Do they work? Or, does it requires manual debugging to get up and running?
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <strong>To what degree are the accepteance criteria met?</strong><br>
+                                                    Once everything is up and running, dev server, API etc., we open your solution in a browser and start playing the game. <br>
+                                                    Does it work? Are all the requirements met? If not, we ask "why" and seek for answers in <code>README.md</code> or code-level comments.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <strong>How does it work?</strong><br>
+                                                    Provided that all of the acceptance criteria are up to standard, we start looking into <i>how</i> you implemented the solution. <br>
+                                                    I.e. How did you decide to structure the application? How is it architectured? How do you manage state in the application? How scalable is your application? <br>
+                                                    How performant is it? Which coding patterns and constructs do you utilise? <br>
+                                                    Where and how do you handle edge cases? What about error handling? Is it accessible?
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <strong>How's the sense of quality?</strong><br>
+                                                    While assessing the inner workings we also take a step back and look at the overall solution. <br>
+                                                    How is it crafted? Does it feel solid, yet simple, in its execution? Is it built using common sense and pragmatic thinking? <br>
+                                                    Is it well-tested? Is a good understanding of UX and application patterns applied? <br>
+                                                    Is there a coherent idea submerging from the code and structure? What's the level of code smells? <br>
+                                                    Are linting rules strictly followed?
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p>Equally there are areas that will <strong>NOT</strong> weight heavily in our evaluation:</p>
+                                        <ul>
+                                            <li>
+                                                <strong>Look and feel</strong> <br>
+                                                <p>
+                                                    We do not evaluate the overall visual look and feel. <br>
+                                                    We expect that your main focus is spend on developing and fine-tuning application logic, which is also why we provided a UI library and pre-defined game assests.<br>
+                                                    We do, however, expect that you show an understanding of common UX patterns and best practices, and can make good use of these when making UI/UX decisions.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <strong>Timeframe</strong> <br>
+                                                <p>
+                                                    If nothing else is agreed, we expect the submission to be handed in within 10-20 days.
+                                                    However, we do not evaluate you on the time you spent on the assignment. <br>
+                                                    I.e. we do not count the days from when you received the assignment till you submit, neither do we consider time intervals between your Git commits. <br>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p><i>Enjoy!</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+</body>
+
+</html>

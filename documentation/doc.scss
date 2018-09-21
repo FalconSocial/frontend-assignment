@@ -1,0 +1,33 @@
+@import "../lib/styles/index.scss";
+
+.flc-navigation {
+    &__group-header {
+        font-weight: bold;
+        margin-top: 20px !important;
+        &:first-child {
+            margin-top: 0 !important;
+        }
+    }
+    &__group-item {
+        padding: 5px 40px !important;
+    }
+}
+
+code {
+    background: #eee;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+.flc-code-block {
+    display: block;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.flc-demo-block {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px 0;
+    background: #f9f9f9;
+}

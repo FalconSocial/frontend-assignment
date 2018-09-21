@@ -1,0 +1,39 @@
+@import "../node_modules/material-design-lite/material.min.css";
+@import "./game.scss";
+
+body { display: block; }
+.flc-layout {
+    &-bg {
+        background-color: #333;
+        background-image:
+            repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+            repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+            linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+            linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+        background-size: 70px 120px;
+    }
+
+    &--center {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+    &--center-middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.flc-card {
+    &-main {
+        margin: 10px;
+        width: 100%;
+    }
+    &-aside {
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 390px;
+    }
+}
