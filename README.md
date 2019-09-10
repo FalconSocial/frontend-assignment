@@ -5,12 +5,15 @@ Welcome to the assignment for candidates applying for a frontend position at Fal
 As part of the hiring process we're evaluating the candidate's technical capabilities through a simple skill assessment. The assessment is divided into several steps:
 
 1) **Home assignment:** After being handed the skill assessment you will spend apprx. 5-10 hours at home preparing a solution following the brief described further down.
+See section: [Home assignment](#home-assignment) to learn more about this step.
 
-2) **Submission:** After you've submitted your result it will be evaluated by two or more members of the frontend team at Falcon.io. You'll typically hear back from us within a week unless communicated otherwise. See sections: [How to submit](#how-to-submit) and [How we evaluate](#how-we-evaluate) to learn more about the submission phase.
+1) **Submission:** After you've submitted your result it will be evaluated by two or more members of the frontend team at Falcon.io. You'll typically hear back from us within a week unless communicated otherwise. See sections: [How to submit](#how-to-submit) and [How we evaluate](#how-we-evaluate) to learn more about the submission step.
 
-3) **Workshop:** Depending on the outcome of the evalutation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution, solidfying and extending it with features.
+2) **Workshop:** Depending on the outcome of the evalutation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution, solidfying and extending it with features.
+See section: [Workshop](#workshop) to learn more about this step.
 
-4) **Final evaluation:**
+3) **Final evaluation:** After the workshop we'll make a final evaluation on the process as a whole.
+This will also be the final step of the hiring process. Unless communicated otherwise, we expect to return with feedback withing a work week.
 
 ## Home assignment
 As per step 1 you're tasked with creating a prototype of a simple Task Manager application _(a.k.a. Todo app)_ using your framework (or none) of choice, Angular, React, Vue etc. It's up to you.
@@ -20,16 +23,16 @@ You add your solution in the `/client` folder including a `README.md` file.
 Unless agreed otherwise, we expect the submission to be handed in within 10 days. The net amount of time expected on the assignment is ~5-10 hours.
 If you, for any reason, estimate that you cannot finish the assignment within the timeframe please be communicative about an ETA.
 
-### Acceptance criteria
-Below you find the business requirements for the application.
-Note that there are requirements both towards the application and the implementation it self.
+### Business requirements
+Below you find the business requirements for the application. 
 
-**As a user of the task manager application I should be able to:**
-1) Create a task with a title and optional description
-2) Edit a task
-3) Delete a task
-4) Complete a task
-5) See a list of tasks
+**The result of your submission should cover the following use cases:**
+A user should be able to...
+1) create a task with a title and optional description
+2) edit a task
+3) delete a task
+4) complete a task
+5) see a list of tasks
 
 ### Technical requirements
 At Falcon.io we use [Angular](https://angular.io/) as the main platform to build applications, however you're free to use any framework and libraries to implement the application, or even go vanilla.
@@ -61,14 +64,14 @@ The workshop will apprx. take 3 hours and consists of initial briefing, hands-on
 
 At the workshop we will develop your solution with the following features (in order):
 
-> ⚠️ **IMPORTANT:** It's important that you **do not** implement the following features in your solution prior to the workshop, e.g. as part of the home assigmment or otherwise. These features are reserved as part of the collaborative sessions during the workshop. You're of course welcome to consider _how_ you would implement them as well as bringing notes, ideas, questions etc. in preparation for the workshop.
+> ⚠️ **IMPORTANT:** It's important that you **do not** implement the following use cases in your solution prior to the workshop, e.g. as part of the home assigmment or otherwise. These features are reserved as part of the collaborative sessions during the workshop. You're of course welcome to consider _how_ you would implement them as well as bringing notes, ideas, questions etc. in preparation for the workshop.
 
-**As a user of the task manager application I should be able to:**
-1) Setting priority of task
-2) Group tasks in multiple lists
-3) Have realtime updates across browsers
-4) Use the application offline
-
+**During the workshop the following use cases should be covered:**
+A user should be able to...
+1) setting priority of task
+2) group tasks in multiple lists
+3) experience realtime updates across browsers
+4) use the application offline
 
 More details about the format, use cases and content will be layed out at the initial briefing.
 
@@ -76,6 +79,7 @@ The goal of the workshop **is not** to work against the clock and test how much 
 
 ## How to submit
 You submit your result via a repo on GitHub.
+Clone this repo and point the remotes to your own public repo and you should be good to go.
 
 Make sure that you have a Git history with meaningful commits that tells the story of how you solved the task.
 A single init commit (or similar) contaning the entire solution is highly discouraged and will prevent us from doing proper evaluation.
@@ -92,7 +96,8 @@ This will ensure that the runtime environments will match.
 "some-package": "0.3.1"
 ```
 Alternatively, you can create a Docker image holding the runtime environment.
-**IMPORTANT:** A static Zip/RAR file containing the solution is not considered a valid submission and will be disregarded.
+
+> ⚠️ **IMPORTANT:** A static Zip/RAR file containing the solution is not considered a valid submission and will be disregarded.
 
 Once you're ready to submit send link to the remote GitHub repo to **frontend-assignment@falcon.io**
 
