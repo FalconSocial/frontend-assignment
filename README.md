@@ -68,7 +68,7 @@ A user should be able to...
 3) experience realtime updates across browsers
 4) use the application offline
 
-> ⚠️ **IMPORTANT:** It's important that you **do not** implement the these use cases in your solution prior to the workshop, e.g. as part of the home assigmment or otherwise. These features are reserved to be part of the collaborative sessions during the workshop. You're of course welcome to consider _how_ you would implement them as well as bringing notes, ideas, questions etc. in preparation for the workshop.
+> ⚠️ **IMPORTANT:** The feature development is a key part of the collaborative sessions during the workshop. It's therefore important that you **do not** implement these use cases in your initial home assignment submission or otherwise provide a final solution. You're of course welcome to consider _how_ you would implement them as well as bringing notes, ideas, questions etc. in preparation for the workshop.
 
 More details about the format, use cases and content will be layed out at the initial briefing.
 
