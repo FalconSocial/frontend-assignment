@@ -81,9 +81,9 @@ Clone this repo and point the remotes to your own public repo and you should be 
 Make sure that you have a Git history with meaningful commits that tells the story of how you solved the task.
 A single init commit (or similar) contaning the entire solution is highly discouraged and will prevent us from doing proper evaluation.
 
-Make sure to provide guidance on how to run your solution in a `README.md`. Also use the this file to highlight if there are any particular aspects of your solution you want us to consider.
+Make sure to provide guidance on how to run your solution in a `README.md`. Also use this file to highlight if there are any particular aspects of your solution you want us to consider.
 
-Make sure to fix the versions of any node_modules.
+Make sure to fix the versions of any dependecies.
 This will ensure that the runtime environments will match.
 ```
 # AVOID
