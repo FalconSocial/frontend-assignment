@@ -2,13 +2,15 @@
 To support the development of the Task Manager we've provided a REST API layer implementing CRUD actions for a `task` resource. 
 
 ## Getting started
-The API layer is a simple Sails application. Make sure that you provide an environment to support Sails. E.g. current version of NodeJS etc.
+The API layer is a simple Sails application. 
+
+Make sure that you provide an environment to support Sails. E.g. relevant version of NodeJS etc.
 
 The setup is a standard Sails application. Any documentation around the setup is covered by the official Sails documentation.
 
 Read more about [Sails here](https://sailsjs.com/).
 
-The setup is provided in the `/server` folder. To get started run the following commands in the folder:
+The setup is provided in the `/server` folder. To get started run the following commands in that folder:
 
 ```bash
 $ npm install
@@ -17,7 +19,7 @@ $ npm start
 
 The API should now be available at `http://localhost:1337`.
 
-You're welcome to add and enhance functionallity within the API layer, if it helps you solve the tasks, as long as the runtime/framework, i.e. Sails, remains the same.
+You're welcome to add and enhance functionallity within the API layer, if it helps you solve the tasks, as long as the overall setup and runtime/framework, i.e. Sails, remains the same.
 
 ## Endpoints
 The following CRUD operations are available through the API

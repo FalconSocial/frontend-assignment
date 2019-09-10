@@ -1,8 +1,8 @@
 {
-  "name": "task-manager",
+  "name": "task-manager-api",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "API layer for frontend skill assessment",
   "keywords": [],
   "dependencies": {
     "sails": "1.2.3",
@@ -20,11 +20,7 @@
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/rasmusbangsted/task-manager.git"
-  },
-  "author": "rasmusbangsted",
+  "author": "Falcon.io",
   "license": "",
   "engines": {
     "node": "^10.15"
