@@ -9,7 +9,7 @@ module.exports = {
   attributes: {
     title: { type: 'string', required: true, },
     description: { type: 'string', allowNull: true, defaultsTo: '' },
-    due: { type: 'number', allowNull: null },
+    priority: { type: 'number', allowNull: null },
     project: {
       model: 'project'
     }
