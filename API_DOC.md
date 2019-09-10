@@ -73,6 +73,6 @@ http|s://localhost:3000
 http|s://localhost:4200
 http|s://localhost:8080
 ```
-If you get a cross origin error make sure that you're client are running on any of the above hosts. Alternatively you can add your client host in: `/server/config/env/production.js`
+If you get a cross origin error make sure that your client is running on any of the above hosts. Alternatively you can add your client host in: `/server/config/env/production.js`
 
 

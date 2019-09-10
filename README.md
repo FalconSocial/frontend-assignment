@@ -63,7 +63,7 @@ At the workshop we will develop your solution with the following features (in or
 
 **During the workshop the following use cases should be covered:**
 A user should be able to...
-1) setting priority of task
+1) set priority of task
 2) group tasks in multiple lists
 3) experience realtime updates across browsers
 4) use the application offline
@@ -127,9 +127,12 @@ Does it work? Are the requirements met? If not, we ask "why" and seek for answer
 
 #### How does it work?
 Provided that all of the acceptance criteria are up to standard, we start looking into how you implemented the solution.
-I.e. How did you decide to structure the application? How is it architectured? How do you manage state in the application? How scalable is your application?
-How performant is it? Which coding patterns and constructs do you utilise?
-Where and how do you handle edge cases? What about error handling? Is it accessible?
+
+- How did you decide to structure the application? How is it architectured? 
+- How do you manage state in the application?
+- How scalable is your application?
+- How performant is it? Which coding patterns and constructs do you utilise?
+- Where and how do you handle edge cases? What about error handling? Is it accessible?
 
 #### How's the sense of quality?
 While assessing the inner workings we also take a step back and look at the overall solution.
@@ -142,7 +145,7 @@ Equally there are areas that will **NOT** weight heavily in our evaluation:
 
 #### Visual design quality
 We do not evaluate the overall visual look and feel.
-We expect that your main focus is spend on developing and fine-tuning application logic.
+We expect that your main focus is spent on developing and fine-tuning application logic.
 We do, however, expect that you show an understanding of common UX patterns and best practices, and can make good use of these when making UI/UX decisions.
 
 #### Timeframe
