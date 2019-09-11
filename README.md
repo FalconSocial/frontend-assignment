@@ -55,7 +55,7 @@ To support the development of the Task Manager we've provided a REST API layer i
 > ⚠️ **IMPORTANT:** It's important that you use of this API to develop your solution as it will both ease the evaluation as well as creating a common ground for the workshop. If you have trouble running the API layer please check the troubleshoot section [here](/API_DOC.md#troubleshooting). If you still encounter issues direct questions to **frontend-assignment@falcon.io** .
 
 ## Workshop
-Depending on the outcome of the evaluation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution. More specifically, you will, in collaboration with two members of our Frontend team on extending your solution with new features.
+Depending on the outcome of the evaluation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution. More specifically, you will, in collaboration with two members of our Frontend team work on extending your solution with new features.
 
 The workshop will approximately take 3 hours and consists of initial briefing, hands-on development and conclusion.
 
