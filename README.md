@@ -1,16 +1,16 @@
 # Frontend Skill Assessment
 Welcome to the assignment for candidates applying for a frontend position at Falcon.io.
 
-## Background
+## Overview
 As part of the hiring process we're evaluating the candidate's technical capabilities through a simple skill assessment. The assessment is divided into several steps:
 
-1) **Home assignment:** After being handed the skill assessment you will spend approximately 5-10 hours at home preparing a solution following the brief described further down.
+1) **Home assignment:** After being handed the skill assessment you will spend approximately 5-10 hours at home preparing a solution following the brief described further below.
    - See section: [Home assignment](#home-assignment) to learn more about this step.
 
 2) **Submission:** Once you're done with the solution; you submit it. Your submission will be evaluated by two or more members of the frontend team at Falcon.io. Afterwards you will typically hear back from us within a week unless communicated otherwise. 
    - See sections: [How to submit](#how-to-submit) and [How we evaluate](#how-we-evaluate) to learn more about the submission step.
 
-3) **Workshop:** Depending on the outcome of the evalutation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution, solidifying and extending it with features.
+3) **Workshop:** Depending on the outcome of the evaluation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution, solidifying and extending it with features.
    - See section: [Workshop](#workshop) to learn more about this step.
 
 4) **Final evaluation:** After the workshop we'll make a final evaluation on the process as a whole.
@@ -22,7 +22,7 @@ You're tasked with creating a frontend prototype of a simple Task Manager applic
 At Falcon.io we use [Angular](https://angular.io/) as the main platform to build applications, however you're free to use any framework and libraries to implement the application, or even go vanilla.
 The important thing is that you feel comfortable in solving the core tasks and can defend your choices and patterns in a potential workshop
 
-Regardless of your framework, UI kit and library choices certain requirements must be fulfilled, as these will be considered doing the evaluations.
+Regardless of your framework, UI kit and library choices certain requirements must be fulfilled, as these will be considered in the evaluation.
 
 The requirements are listed below in the form of _business_ and _technical_ requirements.
 
@@ -53,10 +53,10 @@ To support the development of the Task Manager we've provided a REST API layer i
 
    - Read more about [how to work with the API layer here](/API_DOC.md)
 
-> ⚠️ **IMPORTANT:** It's important that you use this API to develop your solution as it will both ease the evaluation as well as creating a common ground for the workshop. If you have trouble running the API layer please check the troubleshoot section [here](/API_DOC.md#troubleshooting). If you still encounter issues direct questions to **frontend-assignment@falcon.io** .
+> ⚠️ **IMPORTANT:** It's important that you use of this API to develop your solution as it will both ease the evaluation as well as creating a common ground for the workshop. If you have trouble running the API layer please check the troubleshoot section [here](/API_DOC.md#troubleshooting). If you still encounter issues direct questions to **frontend-assignment@falcon.io** .
 
 ## Workshop
-Depending on the outcome of the evalutation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution. More specifically you will, in collaboration with two members of our Frontend team, extend your solution with new features.
+Depending on the outcome of the evaluation you'll be invited for an on-site _(or remote depending on your location and availability)_ workshop where we'll actively work with your solution. More specifically, you will, in collaboration with two members of our Frontend team work on extending your solution with new features.
 
 The workshop will approximately take 3 hours and consists of initial briefing, hands-on development and conclusion.
 
@@ -71,20 +71,21 @@ A user should be able to...
 
 > ⚠️ **IMPORTANT:** The feature development is a key part of the collaborative sessions during the workshop. It's therefore important that you **do not** implement these use cases in your initial home assignment submission or otherwise provide a final solution. You're of course welcome to consider _how_ you would implement them as well as bringing notes, ideas, questions etc. in preparation for the workshop.
 
-More details about the format, use cases and content will be layed out at the initial briefing.
+More details about the format, use cases and content will be given out at the initial briefing.
 
-The goal of the workshop **is not** to work against the clock and test how much can be produced in 3 hours. The goal is to get a feel of how you work in a collaborative setting, how you approach and priorities feature development, how well you can leverage your knowledge and how you handle impediments and seek sparring.
+The goal of the workshop **is not** to work against the clock and test how much can be produced in 3 hours. The goal is to get a feel of how you work in a collaborative setting, how you approach and prioritise feature development, how well you can leverage your knowledge and how you handle impediments and seek sparring.
 
 ## How to submit
 You submit your result via a repo on GitHub.
 Clone this repo and point the remotes to your own public repo and you should be good to go.
 
 Make sure that you have a Git history with meaningful commits that tells the story of how you solved the task.
+
 A single init commit (or similar) contaning the finished solution is highly discouraged and will prevent us from doing proper evaluation.
 
 Make sure to provide guidance on how to run your solution in a `README.md`. Also use this file to highlight if there are any particular aspects of your solution you want us to consider.
 
-Make sure to fix the versions of any dependecies.
+Make sure to fix the versions of any dependencies.
 This will ensure that the runtime environments will match.
 ```
 # AVOID
@@ -93,21 +94,21 @@ This will ensure that the runtime environments will match.
 # GOOD
 "some-package": "0.3.1"
 ```
-Alternatively, you can create a Docker image holding the runtime environment.
+Alternatively, you can create a Docker image containing the runtime environment.
 
 > ⚠️ **IMPORTANT:** A static Zip/RAR file containing the solution is not considered a valid submission and will be disregarded.
 
-Once you're ready to submit send link to the remote GitHub repo to **frontend-assignment@falcon.io**
+Once you're ready to submit, send link to the remote GitHub repo to **frontend-assignment@falcon.io**
 
 Unless agreed otherwise, we expect the submission to be handed in within 10 days. The net amount of time expected on the assignment is ~5-10 hours.
-If you, for any reason, estimate that you cannot finish the assignment within the timeframe please be communicative about an ETA.
+If you, for any reason, estimate that you cannot finish the assignment within the time frame please be communicative about an ETA.
 
 ## How we evaluate
-When we evaluate your home assignemnt, before the onsite workshop, these are the main areas that we prioritize:
+When we evaluate your home assignment, before the on-site workshop, these are the main areas that we prioritize:
 
 #### Does your Git history reveal your workflow?
 When taking a first look at your Git repo we assess how you've iterated on the task.
-We do this by glancing through your Git commits. This will give us an idea of how you've priorised the work and how you've iterated on the development.
+We do this by glancing through your Git commits. This will give us an idea of how you've prioritised the work and how you've iterated on the development.
 E.g. how are business critical vs. non-critical implementations balanced?
 Therefore make sure that your commit messages provide specific context, e.g.:
 ```
@@ -127,12 +128,12 @@ Once everything is up and running, dev server, API etc., we open your solution i
 Does it work? Are the requirements met? If not, we ask "why" and seek for answers in `README.md` or code-level comments.
 
 #### How does it work?
-Provided that all of the acceptance criteria are up to standard, we start looking into how you implemented the solution.
+Provided that all of the acceptance criteria are met, we start looking into how you implemented the solution.
 
 - How did you decide to structure the application? How is it architectured? 
 - How do you manage state in the application?
 - How scalable is your application?
-- How performant is it? Which coding patterns and constructs do you utilise?
+- How well does it perform? Which coding patterns and constructs do you utilise?
 - Where and how do you handle edge cases? What about error handling? Is it accessible?
 
 #### How's the sense of quality?
