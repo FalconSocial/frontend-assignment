@@ -14,10 +14,10 @@ As part of the hiring process we're evaluating the candidate's technical capabil
    - See section: [Workshop](#workshop) to learn more about this step.
 
 4) **Final evaluation:** After the workshop we'll make a final evaluation on the process as a whole.
-This will also be the final step of the hiring process. Unless communicated otherwise, we expect to provide feedback within a work week.
+This will also be the final step of the hiring process. Unless communicated otherwise, we expect to provide feedback within 5 working days.
 
 ## Home assignment
-As per step 1 you're tasked with creating a frontend prototype of a simple Task Manager application _(a.k.a. Todo app).
+You're tasked with creating a frontend prototype of a simple Task Manager application _(a.k.a. Todo app).
 
 At Falcon.io we use [Angular](https://angular.io/) as the main platform to build applications, however you're free to use any framework and libraries to implement the application, or even go vanilla.
 The important thing is that you feel comfortable in solving the core tasks and can defend your choices and patterns in a potential workshop
@@ -28,7 +28,8 @@ The requirements are listed below in the form of _business_ and _technical_ requ
 
 ### Business requirements
 **The result of your submission should cover the following use cases:**
-A user should be able to...
+
+As a user I can...
 1) create a task with a title and optional description
 2) edit a task
 3) delete a task
@@ -38,7 +39,7 @@ A user should be able to...
 ### Technical requirements
 **The result of your submission should cover the following technical aspects:**
 1) You display modern best practices and good code hygiene.
-3) You follow Git practices and your commit history tells the story of how you iterated on the task.
+3) You follow Git best practices and your commit history tells the story of how you iterated on the task.
 4) The application meets accessibility standards.
 5) The application is scalable, maintainable and pragmatic in its structure. Both on code and file level.
 6) The application is built for testability, demonstrated by actual tests.
@@ -79,7 +80,8 @@ You submit your result via a repo on GitHub.
 Clone this repo and point the remotes to your own public repo and you should be good to go.
 
 Make sure that you have a Git history with meaningful commits that tells the story of how you solved the task.
-A single init commit (or similar) containing the entire solution is highly discouraged and will prevent us from doing proper evaluation.
+
+A single init commit (or similar) contaning the finished solution is highly discouraged and will prevent us from doing proper evaluation.
 
 Make sure to provide guidance on how to run your solution in a `README.md`. Also use this file to highlight if there are any particular aspects of your solution you want us to consider.
 
@@ -119,7 +121,7 @@ fix(list): fix issues with the tasks list
 
 #### Does your solution work out-of-the-box?
 Next, we read through your `README.md` and follow your instructions.
-Did you add custom steps? Do they work? Or, does it requires manual debugging to get up and running?
+Did you add custom steps? Do they work? Or does it requires manual debugging to get up and running?
 
 #### To what degree are the requirements met?
 Once everything is up and running, dev server, API etc., we open your solution in a browser and click around.
@@ -136,10 +138,14 @@ Provided that all of the acceptance criteria are met, we start looking into how 
 
 #### How's the sense of quality?
 While assessing the inner workings we also take a step back and look at the overall solution.
-How is it crafted? Does it feel solid, yet simple, in its execution? Is it built using common sense and pragmatic thinking?
-Is it well-tested? Are a good understanding of UX and application patterns applied?
-Is there a coherent idea emerging from the code and structure? What's the level of code smells?
-Are linting rules strictly followed?
+- How is it crafted?
+- Does it feel solid, yet simple in its execution? 
+- Is it built using common sense and pragmatic thinking?
+- Is it well-tested? 
+- Is a good understanding of UX and application patterns applied?
+- Is there a coherent idea emerging from the code and structure? 
+- Is the code clean?
+- Are linting rules strictly followed?
 
 Equally there are areas that will **NOT** weight heavily in our evaluation:
 
