@@ -130,6 +130,7 @@ Provided that all of the acceptance criteria are met, we start looking into how 
 
 - How did you decide to structure the application? How is it architectured? 
 - How do you manage state in the application?
+- How do you divide the application into smaller components?
 - How scalable is your application?
 - How well does it perform? Which coding patterns and constructs do you utilise?
 - Where and how do you handle edge cases? What about error handling? Is it accessible?
@@ -137,7 +138,7 @@ Provided that all of the acceptance criteria are met, we start looking into how 
 #### How's the sense of quality?
 While assessing the inner workings we also take a step back and look at the overall solution.
 How is it crafted? Does it feel solid, yet simple, in its execution? Is it built using common sense and pragmatic thinking?
-Is it well-tested? Are a good understanding of UX and application patterns applied?
+Is it well-tested? Is a good understanding of UX and application patterns applied?
 Is there a coherent idea emerging from the code and structure? What's the level of code smells?
 Are linting rules strictly followed?
 
@@ -145,8 +146,8 @@ Equally there are areas that will **NOT** weight heavily in our evaluation:
 
 #### Visual design quality
 We do not evaluate the overall visual look and feel.
-We expect that your main focus is spent on developing and fine-tuning application logic.
-We do, however, expect that you show an understanding of common UX patterns and best practices, and can make good use of these when making UI/UX decisions.
+We expect that your main focus is spent on developing and fine-tuning business and component logic.
+We do, however, expect that you show an understanding of common UX patterns and best practices, and can make good use of these when making UI/UX decisions as well as when utilising/developing lower level UI components.
 
 #### Timeframe
 If nothing else is agreed, we expect the submission to be handed in within 10 days. However, we do not evaluate you on the time you spent on the assignment.
