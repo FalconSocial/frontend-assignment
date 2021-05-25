@@ -66,13 +66,12 @@ A user should be able to...
 1) set priority of task
 2) group tasks in multiple lists
 3) experience realtime updates across browsers
-4) use the application offline
 
 > ⚠️ **IMPORTANT:** The feature development is a key part of the collaborative sessions during the workshop. It's therefore important that you **do not** implement these use cases in your initial home assignment submission or otherwise provide a final solution. You're of course welcome to consider _how_ you would implement them as well as bringing notes, ideas, questions etc. in preparation for the workshop.
 
 More details about the format, use cases and content will be given out at the initial briefing.
 
-The goal of the workshop **is not** to work against the clock and test how much can be produced in 3 hours. The goal is to get a feel of how you work in a collaborative setting, how you approach and prioritise feature development, how well you can leverage your knowledge and how you handle impediments and seek sparring.
+The goal of the workshop **is not** to work against the clock and test how much can be produced in 2 hours. The goal is to get a feel of how you work in a collaborative setting, how you approach and prioritise feature development, how well you can leverage your knowledge and how you handle impediments and seek sparring.
 
 ## How to submit
 You submit your result via a repo on GitHub.
